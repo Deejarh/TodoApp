@@ -4,9 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
+
+:root {
+  --foreground-primary: #006D77;
+  --foreground-secondary: #83C5BE;
+  --accent: #EDF6F9;
+  --secondary: #FFDDD2;
+  --primary: #E29578;
+  --text: #001219;
+  }
+
 body {
   margin: 0;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
