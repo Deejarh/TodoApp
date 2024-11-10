@@ -14,6 +14,8 @@ module.exports = {
         secondary: 'var(--secondary)',
         foregroundprimary: 'var(--foreground-primary)',
         foregroundsecondary: 'var(--foreground-primary)',
+        accent:'var(--accent)',
+        disable: 'var(--disable)',
         black: 'var(--text)',
 
       }

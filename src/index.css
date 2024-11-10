@@ -8,9 +8,10 @@
 :root {
   --foreground-primary: #006D77;
   --foreground-secondary: #83C5BE;
-  --accent: #EDF6F9;
-  --secondary: #FFDDD2;
-  --primary: #E29578;
+  --accent: #d5ecf3;
+  --secondary: #d9e9e9;
+  --primary: #edf6f9;
+  --disable: #585a5a;
   --text: #001219;
   }
 
@@ -19,3 +20,52 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Hide the default checkbox appearance */
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+/* Style the custom checkbox container */
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* Custom checkbox appearance */
+.custom-checkbox .checkmark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--foreground-primary);
+  border-radius: 4px;
+  position: relative;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Checkmark symbol */
+.custom-checkbox .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+/* Show the checkmark when checkbox is checked */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+  background-color: var(--foreground-primary);
+  border-color: var(--foreground-primary);
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
+  opacity: 1;
+}
+
